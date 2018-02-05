@@ -1,8 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { NgReduxModule } from '@angular-redux/store';
 
 import { AppComponent } from './app.component';
+import {FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
+import {StoreModule} from './store/store.module';
 
 
 @NgModule({
@@ -10,7 +14,11 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule,
+    NgReduxModule,
+    StoreModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
